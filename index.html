@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=`, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>EPQ | Max Smith</title>
     <link rel="stylesheet" href="index.css">
     <script src="index.js"></script>
@@ -22,13 +22,22 @@
     <div class="blog-text-div">
         <p id="date" class="blog-text">27/02/2022</p>
         <h1 id="title" class="blog-text">AI vs Machine Learning</h1>
+        <h2 id="title" class="blog-desc">AI and Machine Learning has been used throughout the
+            technology industry for many years. How can AI and Machine Learning be used
+            within my EPQ application, and what are the differences.
+        </h2>
         <div class="title-tags">
             <a href="https://google.com" class="tag">#ResearchPaper</a><a href="http://google.com" class="tag">#AI</a>
         </div>
+        <div id="main-body-div"></div>
+        <script>
+            fetch('/papers/ai_vs_machinelearning.html')
+                .then(response => response.text())
+                .then(data => {
+                const mainTextDiv = document.getElementById('main-body-div');
+                mainTextDiv.innerHTML = data;
+            });
+        </script>
         
-        <img class="title-img float-left" src="ai_vs_machine_learning_title.webp" style="float: left; margin: 3px 12px 3px 0px; border: 1px solid #000000;">
-        <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Sit amet venenatis urna cursus eget nunc scelerisque viverra. Donec enim diam vulputate ut pharetra sit. Et netus et malesuada fames ac turpis egestas integer eget. Enim ut tellus elementum sagittis vitae et. Odio morbi quis commodo odio aenean sed. Montes nascetur ridiculus mus mauris vitae ultricies leo integer malesuada. Accumsan tortor posuere ac ut. Donec adipiscing tristique risus nec. Cursus vitae congue mauris rhoncus aenean vel. Diam sit amet nisl suscipit adipiscing bibendum est ultricies integer. Vel pretium lectus quam id leo in. Quis blandit turpis cursus in hac habitasse platea dictumst quisque. Justo donec enim diam vulputate ut pharetra sit amet aliquam. Consequat nisl vel pretium lectus quam. At elementum eu facilisis sed.
-        </p>
 </body>
 </html>

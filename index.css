@@ -65,14 +65,26 @@ footer {
     font-family: 'Golos Text', sans-serif;
 }
 
+.blog-desc{
+	margin: 0;
+    font-family: 'Golos Text', sans-serif;
+	font-size: 15px;
+	font-style: italic;
+	width: 40vw;
+	margin-left: 30vw;
+	margin-bottom: 2vh;
+}
+
 .title-tags .tag{
     display: inline-block;
-    margin: 0.5vw;
+    margin: 0.4rem;
     background-color: #9c9c9c;
-    border-radius: 0.8vw;
+    border-radius: 5px;
     padding: 0.3rem;
     color: black;
-    text-decoration: none;;
+    text-decoration: none;
+	font-family: 'Golos Text', sans-serif;
+	transition: color 0.1s ease;
 }
 
 .title-img{
@@ -81,4 +93,26 @@ footer {
     left: 2vw;
     top: 25vh;
     float: left;
+}
+
+#main-body-div{
+	width: 95vw;
+	font-family: 'Golos Text', sans-serif;
+}
+
+#main-body-div p{
+	font-size: 20px;
+	display: inline-block;
+	margin-left: 5vw;
+}
+
+#main-body-div a{
+	font-size: 20px;
+	text-decoration: none;
+	color: grey;
+	transition: color 0.1s ease;	
+}
+
+#main-body-div a:hover, .title-tags .tag:hover{
+	color: rgb(230, 0, 0);
 }
