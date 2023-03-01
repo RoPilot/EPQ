@@ -2,6 +2,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Gloock&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Gloock&family=Golos+Text&display=swap');
 
+picture{
+	width: 100%;
+}
+
+/** CSS FOR HEADER **/
 body {
 	margin: 0;
 	padding: 0;
@@ -52,30 +57,36 @@ footer {
 	text-align: center;
 }
 
-.blog-text-div{
+/** CSS FOR EACH RESEARCH PAGE **/
+
+#main-body-div{
+	margin: auto;
     text-align: center;
 }
 
 #date{
     margin-top: 1vh;
+	font-style: italic;
 }
 
-.blog-text{
+#title{
     margin: 0;
     font-family: 'Golos Text', sans-serif;
 }
 
-.blog-desc{
-	margin: 0;
+#description{
+	text-align: center;
     font-family: 'Golos Text', sans-serif;
 	font-size: 15px;
 	font-style: italic;
-	width: 40vw;
-	margin-left: 30vw;
 	margin-bottom: 2vh;
+	margin: 1rem;
+	margin-top: 0rem;
+	width: 50vw;
+	display: inline-block;
 }
 
-.title-tags .tag{
+#title-tags .tag{
     display: inline-block;
     margin: 0.4rem;
     background-color: #9c9c9c;
@@ -85,9 +96,10 @@ footer {
     text-decoration: none;
 	font-family: 'Golos Text', sans-serif;
 	transition: color 0.1s ease;
+	cursor:default;
 }
 
-.title-img{
+#title-img{
     width: 50vw;
     position:absolute;
     left: 2vw;
@@ -100,19 +112,83 @@ footer {
 	font-family: 'Golos Text', sans-serif;
 }
 
-#main-body-div p{
+#main-text-body{
 	font-size: 20px;
 	display: inline-block;
-	margin-left: 5vw;
+	margin: 1rem;
+	cursor:default;
 }
 
 #main-body-div a{
 	font-size: 20px;
 	text-decoration: none;
 	color: grey;
-	transition: color 0.1s ease;	
+	transition: color 0.1s ease;
+	cursor:default;	
 }
 
 #main-body-div a:hover, .title-tags .tag:hover{
 	color: rgb(230, 0, 0);
+}
+
+/** CSS FOR RESEARCH HOME GRID **/
+
+.product-grid{
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr;
+}
+
+.card{
+	padding: 5px;
+	background-color: rgba(153, 153, 153, 0.2);
+	border-radius: 5px;
+	margin: 0.5vw;
+}
+
+.card__img{
+	width: 100%;
+	aspect-ratio: 1 / 1;
+	border-radius: 5px;
+}
+
+.card__content .card__title, .card__description, .card__date, .card__view{
+	font-family: 'Golos Text', sans-serif;
+	margin: auto;
+}
+
+.card__view{
+	text-align: center;
+	width: 100%;
+}
+
+.card__tags a{
+    display: inline-block;
+    margin: 0.2rem;
+    background-color: #9c9c9c;
+    border-radius: 5px;
+    padding: 0.3rem;
+    color: black;
+    text-decoration: none;
+	font-family: 'Golos Text', sans-serif;
+	transition: color 0.1s ease;
+	cursor:default;
+}
+
+.card__tags a:hover{
+	color: rgb(230, 0, 0);
+}
+
+.card__content h2, p{
+	cursor:default;
+}
+
+@media screen and (max-width: 900px) {
+	.product-grid {
+	  grid-template-columns: 1fr 1fr;
+	}
+}
+@media screen and (min-width: 900px) {
+	.product-grid {
+	  grid-template-columns: 1fr 1fr 1fr 1fr;
+	}
 }

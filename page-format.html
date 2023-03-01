@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EPQ | Max Smith</title>
+    <link rel="stylesheet" href="index.css">
+    <script src="index.js"></script>
+</head>
+<body>
+    <header>
+		<h1>Max Smith</h1>
+		<nav>
+			<ul>
+				<li><a href="#">Home</a></li>
+				<li><a href="research.html">Research</a></li>
+				<li><a href="https://github.com/ropilot">Github</a></li>
+			</ul>
+		</nav>
+	</header>
+    <div id="main-body-div"></div>
+</body>
+</html>
+
+<script>
+    const urlParams = new URLSearchParams(window.location.search);
+    const parameter = urlParams.get('post');
+    if (parameter == "${parameter}"){
+        console.log("ERR | FALSE PARAMETER")
+        window.location.href = 'research.html';
+    } else {
+        console.log("Loading: " + parameter);
+        
+        fetch(`/papers/${parameter}`)
+            .then(response => response.text())
+            .then(data => {
+            const mainTextDiv = document.getElementById('main-body-div');
+            mainTextDiv.innerHTML = data;
+        });
+    }
+</script>
