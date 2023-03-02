@@ -1,0 +1,69 @@
+@import url('https://fonts.googleapis.com/css2?family=Climate+Crisis&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Gloock&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Gloock&family=Golos+Text&display=swap');
+
+picture{
+	width: 100%;
+}
+
+/** CSS FOR HEADER **/
+body {
+	margin: 0;
+	padding: 0;
+	font-family: Arial, sans-serif;
+}
+
+header {
+    text-align: center;
+	background-color: #ff6a00;
+	color: #fff;
+	padding: 20px;
+    font-family: 'Gloock', serif;
+}
+
+h1 {
+	margin: 0;
+	font-size: 36px;
+}
+
+nav ul {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+
+nav ul li {
+	display: inline-block;
+	margin-right: 20px;
+}
+
+nav ul li:last-child {
+	margin-right: 0;
+}
+
+nav ul li a {
+	color: #fff;
+	text-decoration: none;
+}
+
+main {
+	padding: 20px;
+}
+
+footer {
+	background-color: #333;
+	color: #fff;
+	padding: 20px;
+	text-align: center;
+}
+
+/** CSS FOR EACH RESEARCH PAGE **/
+
+.main-body-div #question{
+	margin: auto;
+    text-align: center;
+    font-family: 'Golos Text', sans-serif;
+    padding: 1rem;
+    font-size: 2rem;
+    font-weight: bold;
+}
