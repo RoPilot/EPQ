@@ -130,6 +130,8 @@ footer {
 #main-body-div a:hover, .title-tags .tag:hover{
 	color: rgb(230, 0, 0);
 }
+  
+  
 
 /** CSS FOR RESEARCH HOME GRID **/
 
@@ -183,12 +185,12 @@ footer {
 	cursor:default;
 }
 
-@media screen and (max-width: 900px) {
+@media screen and (max-width: 1000px) {
 	.product-grid {
 	  grid-template-columns: 1fr 1fr;
 	}
 }
-@media screen and (min-width: 900px) {
+@media screen and (min-width: 1000px) {
 	.product-grid {
 	  grid-template-columns: 1fr 1fr 1fr 1fr;
 	}
@@ -223,4 +225,14 @@ footer {
 	font-size: 1.5vh;
 }
 
-  
+#follower {
+	position: absolute;
+	width: 50px;
+	height: 50px;
+	background-color: blue;
+	border-radius: 50%;
+}
+
+#main-text-body a:hover + #follower {
+	background-color: red;
+}

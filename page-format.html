@@ -40,3 +40,11 @@
         });
     }
 </script>
+
+<script>
+    document.addEventListener('mousemove', function(e){
+        var follower = document.getElementById('follower');
+        follower.style.top = e.clientY + 'px';
+        follower.style.left = e.clientX + 'px';
+    });
+</script>
