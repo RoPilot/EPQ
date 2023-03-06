@@ -20,31 +20,13 @@
 		</nav>
 	</header>
     <div id="main-body-div"></div>
+    <div id="line-divider"></div>
+    <div id="reference-type">
+        <input id="reference-box" type="checkbox">
+        <label>Show Full References On Hover</label>
+    </div>
+    <div id="reference-container">
+        <p id="reference-library-title">Reference Library</p>
+    </div>
 </body>
 </html>
-
-<script>
-    const urlParams = new URLSearchParams(window.location.search);
-    const parameter = urlParams.get('post');
-    if (parameter == "${parameter}"){
-        console.log("ERR | FALSE PARAMETER")
-        window.location.href = 'research.html';
-    } else {
-        console.log("Loading: " + parameter);
-        
-        fetch(`/papers/${parameter}`)
-            .then(response => response.text())
-            .then(data => {
-            const mainTextDiv = document.getElementById('main-body-div');
-            mainTextDiv.innerHTML = data;
-        });
-    }
-</script>
-
-<script>
-    document.addEventListener('mousemove', function(e){
-        var follower = document.getElementById('follower');
-        follower.style.top = e.clientY + 'px';
-        follower.style.left = e.clientX + 'px';
-    });
-</script>
