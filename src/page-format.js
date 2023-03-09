@@ -11,7 +11,6 @@ function build_references(aTags){
         const parentElement = document.getElementById("reference-container");
         parentElement.appendChild(new_reference);
     }
-
 }
 
 const urlParams = new URLSearchParams(window.location.search);

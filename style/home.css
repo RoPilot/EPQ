@@ -77,3 +77,47 @@ footer {
     font-size: 0.9rem;
     font-weight: bold;
 }
+
+#selection{
+	display: flex;
+	justify-content: center;
+	background-color: rgba(180, 180, 180, 0.5);
+	margin: 1rem;
+	border-radius: 5px;
+	padding: 0.2rem;
+}
+
+#selection button{
+	height: 15rem;
+	width: 25rem;
+	border-radius: 5px;
+	border: transparent;
+	margin: 0.2rem;
+	font-family: 'Golos Text', sans-serif;
+	font-size: 1rem;
+	transition: all 0.3s;
+}
+
+#selection button:hover{
+	background-color: black;
+	color: white;
+	font-weight: bolder;
+	font-size: 2.5vw;
+}
+
+#selection button::before{
+	--size: 0;
+	content: '';
+	position: absolute;
+	left: var(--x);
+	top: var(--y);
+	width:var(--size);
+	height: var(--size);
+	background: radial-gradient(circle closest side, pink, transparent);
+	transform: translate(-50%, -50%);
+	transition: width 0.2s ease, height 0.2s ease;
+}
+
+#selection button:hover::before{
+	--size: 200px;
+}

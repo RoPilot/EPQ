@@ -1,0 +1,29 @@
+{
+    "Research": {
+        "#AI": [
+            "ai_vs_machinelearning.html",
+            "chatgpt.html"
+        ],
+
+        "#CaseStudy": [
+            "chatgpt.html"
+        ],
+
+        "#ResearchPaper": [
+            "ai_vs_machinelearning.html",
+            "chatgpt.html"
+        ]
+    },
+
+    "Papers": {
+        "ai_vs_machinelearning.html": {
+            "Title": "AI vs Machine Learning",
+            "Description": "AI and Machine Learning has been used throughout the technology industry for many years. How can AI and Machine Learning be used within my EPQ application, and what are the differences."
+        },
+
+        "chatgpt.html": {
+            "Title": "ChatGPT",
+            "Description": "What is ChatGPT, and who are OpenAI? How does ChatGPT show what AI can do."
+        }
+    }
+}

@@ -1,0 +1,186 @@
+@import url('https://fonts.googleapis.com/css2?family=Climate+Crisis&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Gloock&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Gloock&family=Golos+Text&display=swap');
+
+picture{
+	width: 100%;
+}
+
+/** CSS FOR HEADER **/
+body {
+	margin: 0;
+	padding: 0;
+	font-family: Arial, sans-serif;
+}
+
+header {
+    text-align: center;
+	background-color: #ff6a00;
+	color: #fff;
+	padding: 20px;
+    font-family: 'Gloock', serif;
+}
+
+h1 {
+	margin: 0;
+	font-size: 36px;
+}
+
+nav ul {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+
+nav ul li {
+	display: inline-block;
+	margin-right: 20px;
+}
+
+nav ul li:last-child {
+	margin-right: 0;
+}
+
+nav ul li a {
+	color: #fff;
+	text-decoration: none;
+}
+
+main {
+	padding: 20px;
+}
+
+footer {
+	background-color: #333;
+	color: #fff;
+	padding: 20px;
+	text-align: center;
+}
+
+/** CSS FOR EACH RESEARCH PAGE **/
+
+#main-body-div{
+	margin: auto;
+    text-align: center;
+}
+
+#date{
+    margin-top: 1vh;
+	font-style: italic;
+}
+
+#title{
+    margin: 0;
+    font-family: 'Golos Text', sans-serif;
+}
+
+#description{
+	text-align: center;
+    font-family: 'Golos Text', sans-serif;
+	font-size: 15px;
+	font-style: italic;
+	margin-bottom: 2vh;
+	margin: 1rem;
+	margin-top: 0rem;
+	width: 50vw;
+	display: inline-block;
+}
+
+#title-tags .tag{
+    display: inline-block;
+    margin: 0.4rem;
+    background-color: #9c9c9c;
+    border-radius: 5px;
+    padding: 0.3rem;
+    color: black;
+    text-decoration: none;
+	font-family: 'Golos Text', sans-serif;
+	transition: color 0.1s ease;
+	cursor:default;
+}
+
+#title-img{
+    width: 50vw;
+    position:absolute;
+    left: 2vw;
+    top: 25vh;
+    float: left;
+}
+
+#main-body-div{
+	width: 95vw;
+	font-family: 'Golos Text', sans-serif;
+}
+
+#main-text-body{
+	font-size: 20px;
+	display: inline-block;
+	margin: 1rem;
+	cursor:default;
+}
+
+#main-body-div a{
+	font-size: 20px;
+	text-decoration: none;
+	color: grey;
+	transition: color 0.1s ease;
+	cursor:default;	
+}
+
+#main-text-body img{
+	width: 200px;
+	border-radius: 5px;
+}
+
+#main-body-div a:hover, .title-tags .tag:hover{
+	color: rgb(230, 0, 0);
+}
+
+#main-text-body a:hover{
+	cursor: none;
+}
+
+/** CSS FOR RESEARCH SEARCH RESULTS **/
+
+.container {
+    padding: 0.5rem;
+    border-radius: 5px;
+    background-color: rgba(200, 200, 200, 0.5);
+    width: 50vw;
+    text-align: center;
+    margin: 1rem 23vw;
+}
+
+.container .container-title{
+    font-size: 1.5rem;
+    font-family: 'Golos Text', sans-serif;
+}
+
+.card{
+    background-color: rgb(208, 208, 208);
+    border-radius: 5px;
+    margin: 0.5rem;
+    padding: 0.5rem;
+}
+
+.card *{
+    margin: 0.1rem;
+    font-family: 'Golos Text', sans-serif;
+}
+
+.card__view{
+    border-radius: 5px;
+    border: transparent;
+    margin-top: 1rem;
+    padding-left: 10vw;
+    padding-right: 10vw;
+}
+
+.container-searchedfor{
+    margin: 0;
+    font-style: italic;
+}
+
+.card__description{
+    color: rgb(49, 49, 49);
+}
