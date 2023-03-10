@@ -74,9 +74,14 @@ if (parameter == null){
       var pages = data.Research[param];
       var results_title = document.querySelector('.container-title');
       var results_amount = document.querySelector(".container-searchedfor")
-      results_title.innerHTML = "Results For " + param
-      results_amount.innerHTML = "Search Found " + pages.length + " Pages";
-      build_references(pages)
+      if (pages) {
+        results_title.innerHTML = "Results For " + param
+        results_amount.innerHTML = "Search Found " + pages.length + " Pages";
+        build_references(pages)
+      } else {
+        var results_zero = document.querySelector(".container-noresults");
+        results_zero.innerHTML = "We're Not Sure How You've Searched For This. We've got no items.";
+      };
     })
 
 }

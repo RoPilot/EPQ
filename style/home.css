@@ -94,7 +94,7 @@ footer {
 	border: transparent;
 	margin: 0.2rem;
 	font-family: 'Golos Text', sans-serif;
-	font-size: 1vw;
+	font-size: small;
 	transition: all 0.3s;
 }
 
@@ -102,7 +102,7 @@ footer {
 	background-color: black;
 	color: white;
 	font-weight: bolder;
-	font-size: 2vw;
+	font-size: larger;
 }
 
 #selection button::before{
