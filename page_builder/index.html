@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Build A New Page</title>
+    <script src="builder.js"></script>
+</head>
+<body>
+    <form class="page_details">
+        <div id="title-div">
+            <label>Title</label>
+            <input name="title" id="title">
+        </div>
+        <div id="desc">
+            <label>Desc</label>
+            <input name="description" id="description">
+        </div>
+        <div id="date-div">
+            <label>Date</label>
+            <input name="date" id="date">
+        </div>
+    </form><br>
+    <form class="tags">
+        <input type="text" id="tag-input" placeholder="Enter tags and press enter" />
+        <div id="tag-container"></div>
+    </form>
+    <textarea id="input-text"></textarea><br><br>
+    <button id="build-page">Build Page</button>
+</body>
+</html>
+
+<style>
+    .tag {
+  display: inline-block;
+  background-color: #f2f2f2;
+  color: #555;
+  border-radius: 4px;
+  padding: 4px 8px;
+  margin-right: 8px;
+  margin-bottom: 8px;
+  cursor: pointer;
+}
+
+</style>
