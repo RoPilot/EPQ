@@ -39,13 +39,13 @@ return tag;
 const inputText = document.getElementById('input-text');
 
 inputText.addEventListener('keydown', function(event) {
-  if (event.ctrlKey && event.key === 'r') {
+  if (event.ctrlKey && event.key === 'b') {
     event.preventDefault();
     const selectedText = inputText.value.substring(inputText.selectionStart, inputText.selectionEnd);
     const ref = prompt("Enter reference:");
     const fullRef = prompt("Enter full reference:");
     const link = prompt("Enter link:");
-    const linkHTML = `<a reference="${ref}" full_reference="${fullRef}" id="reference" href="${link}">`;
+    const linkHTML = `<a reference="${ref}" full_reference="${fullRef}" id="reference" href="${link}">${selectedText}</a>`;
     inputText.setRangeText(linkHTML, inputText.selectionStart, inputText.selectionEnd, "end");
   }
 });
@@ -62,7 +62,7 @@ document.getElementById('build-page').addEventListener('click', function() {
 
     for (let i=0; i < tags.length; i++){
         let tagName = tags[i];
-        let formattedTag = `<a href="search-results.html?post=${tag}" class="tag">#${tag}</a>`;
+        let formattedTag = `<a href="search-results.html?post=${tagName}" class="tag">#${tagName}</a>`;
         toWriteDesc += formattedTag;
         tags[i] = formattedTag;
     };
@@ -71,9 +71,19 @@ document.getElementById('build-page').addEventListener('click', function() {
 
     var finalToWrite = toWriteDate + toWriteTitle + toWriteDesc + toWriteMain;
 
+    document.getElementById('result').innerHTML = finalToWrite
     console.log(finalToWrite)
-    
 
+    // MANIFEST.JSON ASSIST
+
+    var manifestBox = document.getElementById("json");
+
+    var suggestedDocumentPage = title.replace(" ", "_");
+    suggestedDocumentPage = suggestedDocumentPage.toLowerCase();
+    suggestedDocumentPage = suggestedDocumentPage + ".html"
+
+    var text = `"${suggestedDocumentPage}": {\n  "Title": "${title}",\n  "Description": "${desc}"\n}`;
+    manifestBox.innerHTML = text
 
 
 })

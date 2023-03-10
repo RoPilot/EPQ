@@ -27,7 +27,10 @@
         <div id="tag-container"></div>
     </form>
     <textarea id="input-text"></textarea><br><br>
-    <button id="build-page">Build Page</button>
+    <button id="build-page">Build Page</button><br>
+    <textarea id="result" readonly></textarea><br><br>
+    <label>Manifest.JSON Information</label><br>
+    <textarea id="json" readonly></textarea>
 </body>
 </html>
 
@@ -41,6 +44,12 @@
   margin-right: 8px;
   margin-bottom: 8px;
   cursor: pointer;
+}
+
+textarea{
+    width: 75vw;
+    height: 20vw
+
 }
 
 </style>

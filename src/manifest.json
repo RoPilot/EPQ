@@ -12,7 +12,13 @@
         "#ResearchPaper": [
             "ai_vs_machinelearning.html",
             "chatgpt.html"
+        ],
+
+        "#Development": [
+            "web_development.html"
         ]
+
+        
     },
 
     "Papers": {
@@ -24,6 +30,11 @@
         "chatgpt.html": {
             "Title": "ChatGPT",
             "Description": "What is ChatGPT, and who are OpenAI? How does ChatGPT show what AI can do."
+        },
+
+        "web_development.html": {
+            "Title": "Web Development",
+            "Description": "See the journey of the creation of this website"
         }
     }
 }
