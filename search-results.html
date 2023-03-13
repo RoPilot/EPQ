@@ -23,7 +23,10 @@
     <div class="container">
         <h1 class="container-title">Results For</h1>
         <p class="container-searchedfor">Returned 0 Results</p>
-        <p class="container-noresults"></p>
+        <form class="search-form">
+            <input id="search-input" type="text" placeholder="Search For Tag" onkeydown="if(event.keyCode===13) {event.preventDefault(); send_req();}">
+            <button type="button" onclick="send_req()">GO</button>
+        </form>
         <div class="results-grid">
             </div>
         </div>
@@ -32,3 +35,14 @@
 
 </body>
 </html>
+
+<script>
+    // CODE MANAGES CLICK TO SEARCH AND REDIRECT
+
+    function send_req(){
+        console.log("hello");
+        var search = (document.getElementById('search-input')).value;
+        document.location.href = `search-results.html?post=${search}`;
+    };
+
+</script>

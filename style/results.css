@@ -184,3 +184,26 @@ footer {
 .card__description{
     color: rgb(49, 49, 49);
 }
+
+.search-form #search-input{
+	margin-top: 1vh;
+	border-radius: 5px;
+	border: transparent;
+	width: 45vw;
+	height: 2rem;
+	text-align: center;
+	font-family: 'Golos Text', sans-serif;
+}
+
+.search-form button{
+	border-radius: 5px;
+	border: transparent;
+	cursor:pointer;
+	transition: all 0.2s;
+	height: 2rem;
+}
+
+.search-form button:hover{
+	background-color: #9c9c9c;
+	font-family: 'Golos Text', sans-serif;
+}

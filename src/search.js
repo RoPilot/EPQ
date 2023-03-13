@@ -79,8 +79,7 @@ if (parameter == null){
         results_amount.innerHTML = "Search Found " + pages.length + " Pages";
         build_references(pages)
       } else {
-        var results_zero = document.querySelector(".container-noresults");
-        results_zero.innerHTML = "We're Not Sure How You've Searched For This. We've got no items.";
+        results_title.innerHTML = "Results For " + param
       };
     })
 
