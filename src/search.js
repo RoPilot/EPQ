@@ -1,35 +1,27 @@
-  function build_references(pages){
+  function buildResultsTags(pages){
     for (var i = 0; i < pages.length; i++) {
     
-
-      // Create a new div element with the class "card"
       const card = document.createElement('div');
       card.classList.add('card');
 
-      // Create a new div element with the class "card__content"
       const cardContent = document.createElement('div');
       cardContent.classList.add('card__content');
 
-      // Create a new h2 element with the class "card__title"
       const cardTitle = document.createElement('h2');
       cardTitle.classList.add('card__title');
 
-      // Create a new p element with the class "card__description"
       const cardDescription = document.createElement('p');
       cardDescription.classList.add('card__description');
 
-      // Create a new button element with the class "card__view" and the ID "view-post"
       const cardButton = document.createElement('button');
       cardButton.classList.add('card__view');
       cardButton.setAttribute('id', 'view-post');
       cardButton.textContent = 'View This Post';
 
-      // Append the title, description, and button elements to the card content element
       cardContent.appendChild(cardTitle);
       cardContent.appendChild(cardDescription);
       cardContent.appendChild(cardButton);
 
-      // Append the card content element to the card element
       card.appendChild(cardContent);
 
       (function(index) {
@@ -52,35 +44,102 @@
           });
       })(i);
 
-      // Find the "results grid" element and append the card element to it
       const resultsGrid = document.querySelector('.results-grid');
       resultsGrid.appendChild(card);
 
     }
-}
+};
 
+function buildResultsName(results){
+  results.forEach(paper => {
+    const card = document.createElement('div');
+    card.classList.add('card');
+  
+    const cardContent = document.createElement('div');
+    cardContent.classList.add('card__content');
+  
+    const cardTitle = document.createElement('h2');
+    cardTitle.classList.add('card__title');
+    cardTitle.textContent = paper.Title
+  
+    const cardDescription = document.createElement('p');
+    cardDescription.classList.add('card__description');
+    cardDescription.textContent = paper.Description;
+  
+    const cardButton = document.createElement('button');
+    cardButton.classList.add('card__view');
+    cardButton.setAttribute('id', 'view-post');
+    cardButton.textContent = 'View This Post';
+    console.log(paper)
+    cardButton.onclick = function() {
+      var search = (paper.Title).replace(/\s+/g, "_");
+      search = search.toLowerCase() + ".html"
+      console.log(search)
+      window.location.href='page-format.html?post=' + search
+    }
+  
+    cardContent.appendChild(cardTitle);
+    cardContent.appendChild(cardDescription);
+    cardContent.appendChild(cardButton);
+  
+    card.appendChild(cardContent);
+
+    const resultsGrid = document.querySelector('.results-grid');
+    resultsGrid.appendChild(card);
+
+  });
+};
 
 var urlParams = new URLSearchParams(window.location.search);
-var parameter = urlParams.get('post');
-if (parameter == null){
+var post_param = urlParams.get('post');
+var search_param = urlParams.get('search')
+console.log(search_param)
+if (post_param == null){
     console.log("ERR | FALSE PARAMETER");
     window.location.href = 'research.html';
-} else {
-    console.log("#" + parameter);
+} else if (search_param == 'file') {
+  console.log(post_param);
+  post_param = post_param.toLowerCase();
     fetch('src/manifest.json')
     .then(response => response.json())
     .then(data => {
-      var param = "#" + parameter
+      var results_title = document.querySelector('.container-title');
+      var results_amount = document.querySelector(".container-searchedfor")
+      results_title.innerHTML = "Results For " + post_param
+      var papers = data.Papers;
+      console.log(papers)
+      var results = new Array();
+      for (var key in papers) {
+        if (papers.hasOwnProperty(key)) {
+          var paper = papers[key];
+          var title = paper.Title;
+          title = title.toLowerCase();
+          if (title.includes(post_param)) {
+            console.log(title.toUpperCase() + " Returned Inside!");
+            results.push(paper);
+          }
+        }
+      }
+
+      buildResultsName(results)
+
+      results_amount.innerHTML = "Search Found Pages";
+    })
+} else {
+  console.log("#" + post_param);
+    fetch('src/manifest.json')
+    .then(response => response.json())
+    .then(data => {
+      var param = "#" + post_param
       var pages = data.Research[param];
       var results_title = document.querySelector('.container-title');
       var results_amount = document.querySelector(".container-searchedfor")
       if (pages) {
         results_title.innerHTML = "Results For " + param
         results_amount.innerHTML = "Search Found " + pages.length + " Pages";
-        build_references(pages)
+        buildResultsTags(pages)
       } else {
         results_title.innerHTML = "Results For " + param
       };
     })
-
 }

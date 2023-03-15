@@ -71,6 +71,7 @@ document.getElementById('build-page').addEventListener('click', function() {
 
     var finalToWrite = toWriteDate + toWriteTitle + toWriteDesc + toWriteMain;
 
+    document.getElementById('result').innerHTML = ""
     document.getElementById('result').innerHTML = finalToWrite
     console.log(finalToWrite)
 

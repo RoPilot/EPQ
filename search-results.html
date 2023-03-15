@@ -26,6 +26,10 @@
         <form class="search-form">
             <input id="search-input" type="text" placeholder="Search For Tag" onkeydown="if(event.keyCode===13) {event.preventDefault(); send_req();}">
             <button type="button" onclick="send_req()">GO</button>
+            <select id="search-type">
+                <option value="tag">Tag</option>
+                <option value="file">Blog Name</option>
+            </select>
         </form>
         <div class="results-grid">
             </div>
@@ -40,9 +44,9 @@
     // CODE MANAGES CLICK TO SEARCH AND REDIRECT
 
     function send_req(){
-        console.log("hello");
         var search = (document.getElementById('search-input')).value;
-        document.location.href = `search-results.html?post=${search}`;
+        var search_type = (document.getElementById('search-type')).value;
+        document.location.href = `search-results.html?post=${search}&search=${search_type}`;
     };
 
 </script>

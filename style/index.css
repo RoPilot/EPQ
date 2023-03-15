@@ -197,11 +197,6 @@ footer {
 	  grid-template-columns: 1fr 1fr;
 	}
 }
-@media screen and (min-width: 1000px) {
-	.product-grid {
-	  grid-template-columns: 1fr 1fr 1fr 1fr;
-	}
-}
 
 .card__image__container{
 	position: relative;

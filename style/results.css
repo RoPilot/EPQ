@@ -207,3 +207,10 @@ footer {
 	background-color: #9c9c9c;
 	font-family: 'Golos Text', sans-serif;
 }
+
+#search-type{
+	height: 2rem;
+	border:transparent;
+	font-family: 'Golos Text', sans-serif;
+	margin-top: 0.1rem;
+}
