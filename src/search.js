@@ -120,10 +120,11 @@ if (post_param == null){
           }
         }
       }
+      
+      results_amount.innerHTML = "Search Found " + results.length + " Pages";
 
       buildResultsName(results)
 
-      results_amount.innerHTML = "Search Found Pages";
     })
 } else {
   console.log("#" + post_param);

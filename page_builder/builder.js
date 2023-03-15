@@ -86,6 +86,37 @@ document.getElementById('build-page').addEventListener('click', function() {
     var text = `"${suggestedDocumentPage}": {\n  "Title": "${title}",\n  "Description": "${desc}"\n}`;
     manifestBox.innerHTML = text
 
+    // RESEARCH.HTML
+
+    var formatBox = document.getElementById("page-format");
+    var img = document.getElementById("image").value;
+    var img_txt = document.getElementById("image-text").value;
+
+    for (let i=0; i < tags.length; i++){
+      let tagName = tags[i];
+      var formattedTag = `<a href="search-results.html?post=${tagName}" class="tag">#${tagName}</a>`;
+      toWriteDesc += formattedTag;
+      tags[i] = formattedTag;
+    };
+
+    var text =`<div class="card">
+    <div class="card__image__container">
+        <img src="img/${img}.png" alt="" class="card__img">
+        <p class="hover-text">"${img_txt}"</p>
+    </div>
+    <div class="card__content">
+        <button id="view-post" class="card__view" onclick=" window.location.href = 'page-format.html?post=chatgpt.html';">View This Post</button>
+        <h2 class="card__title">${title}</h2><br>
+        <p class="card__description">${desc}
+        </p>
+        <div class="card__tags">
+            ${formattedTag}
+        </div>
+    </div>
+</div>`;
+
+    formatBox.innerHTML = text;
+
 
 })
 
