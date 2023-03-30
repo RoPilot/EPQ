@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -8,23 +9,28 @@
     <link rel="stylesheet" href="style/results.css">
     <script src="src/search.js"></script>
 </head>
+
 <body>
     <header>
-		<h1>Max Smith</h1>
-		<nav>
-			<ul>
-				<li><a href="index.html">Home</a></li>
-				<li><a href="research.html">Research</a></li>
-				<li><a href="https://github.com/ropilot">Github</a></li>
-			</ul>
-		</nav>
-	</header>
-    
+        <h1>Max Smith</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="research.html">Research</a></li>
+                <li><a href="https://github.com/ropilot">Github</a></li>
+            </ul>
+        </nav>
+    </header>
+    <div id="loader">
+        Loading...
+    </div>
+
     <div class="container">
         <h1 class="container-title">Results For</h1>
         <p class="container-searchedfor">Returned 0 Results</p>
         <form class="search-form">
-            <input id="search-input" type="text" placeholder="Search For Tag" onkeydown="if(event.keyCode===13) {event.preventDefault(); send_req();}">
+            <input id="search-input" type="text" placeholder="Search For Tag"
+                onkeydown="if(event.keyCode===13) {event.preventDefault(); send_req();}">
             <button type="button" onclick="send_req()">GO</button>
             <select id="search-type">
                 <option value="tag">Tag</option>
@@ -32,18 +38,19 @@
             </select>
         </form>
         <div class="results-grid">
-            </div>
         </div>
+    </div>
     </div>
 
 
 </body>
+
 </html>
 
 <script>
     // CODE MANAGES CLICK TO SEARCH AND REDIRECT
 
-    function send_req(){
+    function send_req() {
         var search = (document.getElementById('search-input')).value;
         var search_type = (document.getElementById('search-type')).value;
         document.location.href = `search-results.html?post=${search}&search=${search_type}`;
